@@ -13,12 +13,21 @@ const Clientes = ({ images }) => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 3800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -27,6 +36,7 @@ const Clientes = ({ images }) => {
           slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
+          dots: false,
         },
       },
       {
@@ -34,14 +44,15 @@ const Clientes = ({ images }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
   };
 
   return (
-    <div className="py-8">
-      <h2 className="text-4xl font-bold text-center mb-8">NUESTROS CLIENTES</h2>
+    <div className="">
+      <h2 className="text-4xl font-bold text-left mb-8">NUESTROS CLIENTES</h2>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center">
@@ -59,8 +70,8 @@ const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} bg-green-500 rounded-full p-2`}
-      style={{ ...style, display: 'block', right: '10px' }}
+      className={`${className}  rounded-full p-2`}
+      style={{ ...style, display: 'block', right: '20px' }}
       onClick={onClick}
     />
   );
@@ -70,8 +81,8 @@ const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} bg-green-500 rounded-full p-2`}
-      style={{ ...style, display: 'block', left: '10px' }}
+      className={`${className} rounded-full p-2`}
+      style={{ ...style, display: 'block', left: '20px'}}
       onClick={onClick}
     />
   );

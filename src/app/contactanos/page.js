@@ -10,13 +10,14 @@ export default function Home() {
     return (
       <div>
        <main>
-        <div className="w-full bg-banner-bg bg-center">
-          <div className="w-full bg-black opacity-80 text-white">
+      
             <NavBar />
-            <BannerCierre/>
-          </div>
-        </div>
+            
+         
       </main>
+      
+      <div style={{backgroundImage: "url('/fondos/Fondo.png')", paddingTop:'7.1rem'}}></div>
+      <BannerCierre/>
         <div>
           <Formulario/>
         </div>

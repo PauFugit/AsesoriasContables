@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <div>
       <main>
-        <div className="w-full bg-banner-bg bg-center">
-          <div className="w-full bg-black opacity-80 text-white">
+       
             <NavBar />
-            <Banner />
-          </div>
-        </div>
+            
+         
       </main>
 
+      <div style={{paddingTop:'8.1rem'}}></div>
+      <Banner />
       <section>
         <Asesorias/>
       </section>

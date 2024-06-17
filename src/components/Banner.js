@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className="relative bg-blue-100 text-white">
       <Image
-        src="/path-to-your-image.png"
+        src="/assets/BannerServiciosPage.jpg"
         alt="Banner Background"
         layout="fill"
         objectFit="cover"

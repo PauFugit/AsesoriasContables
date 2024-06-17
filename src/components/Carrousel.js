@@ -46,6 +46,9 @@ const Carrousel = () => {
           <div className="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col justify-center items-center text-center p-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{slide.text}</h1>
             <p className="text-white mb-8">{slide.description}</p>
+            
+            <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />
+
             <button className="bg-green-400 text-white py-2 px-6 rounded-full hover:bg-green-500">{slide.buttonText}</button>
           </div>
         </div>

@@ -35,7 +35,7 @@ export default function NuestrosClientes() {
   ];
 
   return (
-    <div className="min-h-screen py-2">
+    <div className="py-2">
       {/* Otros componentes y secciones de tu página */}
       <Clientes images={clientLogos} />
     </div>

@@ -8,30 +8,25 @@ import Valores from '@/components/Valores';
 
 
 export default function Home() {
-    return (
-      <div>
-       <main>
-        <div className="w-full bg-banner-bg bg-center">
-          <div className="w-full bg-black opacity-80 text-white">
-            <NavBar />
-          
-          </div>
-        </div>
+  return (
+    <div>
+      <main>
+        <NavBar />
       </main>
-        <section>
-          <AboutUs/>
-        </section>
-  
-          <section>
-            <Valores/>
-          </section>
-          
-          <section>
-            <NuestrosClientes/>
-          </section>
-  
-        <Footer />
-      </div>
-  
-    );
-  }
+      <div style={{ paddingTop: '8rem' }}></div>
+      <section>
+        <AboutUs />
+      </section>
+      <section>
+        <Valores />
+      </section>
+      <section className='bg-blue-200'>
+        <div className='max-w-6xl mx-auto px-4 py-6'>
+          <NuestrosClientes />
+        </div>
+      </section>
+      <Footer />
+    </div>
+
+  );
+}

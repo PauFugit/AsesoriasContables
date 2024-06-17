@@ -27,8 +27,10 @@ export default function Home() {
         <BlogSection/>
       </section>
 
-      <div>
+      <div className='py-8'>
+        <div className='p-20'>
         <NuestrosClientes />
+      </div>
       </div>
       </div>
       <div className="w-full" >
