@@ -28,11 +28,11 @@ export default function Home() {
         </section>
 
         <div className='py-8'>
-          <div className='p-20'>
-          <h2 className="text-8xl font-alternative text-left my-10 py-10  text-custom-blue" style={{letterSpacing:"0.1rem"}}>NUESTROS CLIENTES</h2>
+         
+          <h2 className="text-6xl md:text-8xl pl-4 font-alternative text-left my-10 py-10  text-custom-blue" style={{letterSpacing:"0.1rem"}}>NUESTROS CLIENTES</h2>
             <NuestrosClientes />
           </div>
-        </div>
+       
       </div>
      
         <div className="bg-center" style={{ backgroundImage: "url('/assets/bannercierredos.jpg')", backgroundSize: "cover" }} >

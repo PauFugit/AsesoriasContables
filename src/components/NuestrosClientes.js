@@ -35,7 +35,7 @@ export default function NuestrosClientes() {
   ];
 
   return (
-    <div className="py-2">
+    <div className="">
       {/* Otros componentes y secciones de tu página */}
       <Clientes images={clientLogos} />
     </div>

@@ -31,11 +31,10 @@ const Clientes = ({ images }) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
           dots: false,
         },
       },
@@ -51,12 +50,12 @@ const Clientes = ({ images }) => {
   };
 
   return (
-    <div className="text-custom-blue font-grotesk container pb-20">
+    <div className="text-custom-blue font-grotesk container mx-auto px-4 pb-20">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="flex justify-center items-center">
-            <div className="rounded-full overflow-hidden w-40 h-40 border-custom-blue">
-              <Image src={image.src} alt={image.alt} width={160} height={160} className="object-cover" />
+          <div key={index} className="flex justify-center items-center p-2">
+            <div className="relative w-40 h-40">
+              <Image src={image.src} alt={image.alt} layout="fill" className="object-cover rounded-full" />
             </div>
           </div>
         ))}
@@ -73,7 +72,7 @@ const SampleNextArrow = (props) => {
       style={{ ...style, display: 'block', right: '20px' }}
       onClick={onClick}
     >
-      <img src="/icons/flechaverdeizquierda.png" alt="Next" width={40} height={40} />
+      <Image src="/icons/flechaverdeizquierda.png" alt="Next" width={40} height={40} />
     </div>
   );
 };
@@ -83,10 +82,10 @@ const SamplePrevArrow = (props) => {
   return (
     <div
       className={`${className} prev-arrow`} 
-      style={{ ...style, display: 'block', left: '-40px' }}
+      style={{ ...style, display: 'block', left: '20px' }}
       onClick={onClick}
     >
-      <img src="/icons/flechaverdederecha.png" alt="Previous" width={40} height={40} />
+      <Image src="/icons/flechaverdederecha.png" alt="Previous" width={40} height={40} />
     </div>
   );
 };

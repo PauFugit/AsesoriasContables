@@ -18,7 +18,7 @@ function Footer() {
 							contacto@asesoriasvaldivia.cl
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
-							<Link href="/contactanos">Cotiza con nosotros</Link>
+							<Link href="/cotiza">Cotiza con nosotros</Link>
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
 						<Link href="/contactanos">Consultas Generales</Link>

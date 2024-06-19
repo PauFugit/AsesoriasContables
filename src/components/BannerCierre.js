@@ -19,7 +19,7 @@ const BannerCierre = () => {
     <div className="h-96  flex flex-col justify-center items-center"
     
     >
-      <h1 className="text-8xl uppercase text-custom-green" style={{letterSpacing:"0.2rem"}}>
+      <h1 className="text-8xl uppercase border-4 border-custom-green rounded-full px-20 text-custom-green" style={{letterSpacing:"0.2rem"}}>
         ASESORÍAS VALDIVIA
       </h1>
       <p className="text-base md:text-3xl font-semibold mt-2 text-custom-white shadow-custom-green">

@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const slides = [
   {
@@ -9,18 +10,21 @@ const slides = [
     text: ["ASESÓRATE,", "FÓRMATE,", "CRECE."],
     description: ["Maximiza tu eficiencia y rentabilidad", "con nuestra asesoría contable y tributaria potenciada por estrategias digitales."],
     buttonText: "Contáctanos",
+    href:"/contactanos",
   },
   {
     src: '/assets/bannerextra.jpg', // Actualiza con la ruta de tu segunda imagen
     text: ["INNOVA,", "APRENDE,", "TRIUNFA."],
     description: ["Transformamos tus datos en decisiones rentables", "con nuestra expertise en marketing digital y asesoría contable."],
-    buttonText: "Más Información",
+    buttonText: "Saber más",
+    href: "/servicios",
   },
   {
     src: '/assets/bannerBg_3.jpg', // Actualiza con la ruta de tu tercera imagen
     text: ["DESCUBRE,", "ANALIZA,", "CRECE."],
     description: ["Desata el potencial de tu negocio", "con nuestro enfoque digital en asesoría contable y tributaria."],
-    buttonText: "Únete Ahora",
+    buttonText: "Cotiza Ahora",
+    href: "/cotiza",
   }
 ]
 
@@ -46,7 +50,7 @@ const Carrousel = () => {
           <div className="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col justify-center items-start text-left p-8 md:p-16 lg:p-24 xl:p-32">
             <div className="mb-4">
               {slide.text.map((word, i) => (
-                <h1 key={i} className="text-4xl md:text-5xl lg:text-8xl mb-4 text-white">{word}</h1>
+                <h1 key={i} className={`text-4xl md:text-5xl lg:text-8xl mb-4 ${i === 1 ? 'text-custom-green' : 'text-white'}`}>{word}</h1>
               ))}
             </div>
             <div className="flex flex-col space-y-1">
@@ -58,11 +62,12 @@ const Carrousel = () => {
                 <p className="text-lg md:text-xl text-white">{slide.description}</p>
               )}
               <div className="flex items-center space-x-4 pt-10">
-              <Image src="/icons/flechaverdederecha.png" width={60} height={60} alt="icon" />
-
-                <button className="bg-custom-green text-custom-blue py-1 px-8 text-l md:text-xl lg:text-3xl rounded-full hover:bg-custom-white">
-                  {slide.buttonText}
-                </button>
+                <Image src="/icons/flechaverdederecha.png" width={60} height={60} alt="icon" />
+                <Link href="/contactanos"
+                  className="bg-custom-green text-custom-blue py-1 px-8 text-l md:text-xl lg:text-3xl rounded-full hover:bg-custom-white"
+                  >  {slide.buttonText}
+                  
+                </Link>
               </div>
             </div>
           </div>

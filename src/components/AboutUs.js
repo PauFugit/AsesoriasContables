@@ -11,19 +11,19 @@ const AboutUs = () => {
       <div className="container mx-auto py-12">
         <div className="flex flex-wrap justify-center items-center mb-8">
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <img src="/images/credencialricardo.png" alt="Ricardo Valdivia Salis" className="w-full h-auto" />
+            <Image src="/images/credencialricardo.png" alt="Ricardo Valdivia Salis" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <img src="/images/credencialgabriela.png" alt="Gabriela Oyanadel Dubost" className="w-full h-auto" />
+            <Image src="/images/credencialgabriela.png" alt="Gabriela Oyanadel Dubost" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <img src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
+            <Image src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <img src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
+            <Image src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
 
           </div>
         </div>
