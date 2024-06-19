@@ -1,5 +1,5 @@
 'use client'
-// components/FormularioContacto.js
+
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -117,7 +117,7 @@ const Formulario = () => {
                     type="submit"
                   >
                     
-                      <path
+                    <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
