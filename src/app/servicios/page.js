@@ -33,6 +33,7 @@ export default function Home() {
                   src="/assets/icononuestrosservicios.png"
                   width={100}
                   height={100}
+                  alt="Ícono nuestros servicios"
                 />
                 <p className='text-2xl font-alternative'>CUERPO DE TEXTO LOREM IPSUM, Sed ut perspiciatis unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -47,6 +48,7 @@ export default function Home() {
                   src="/icons/iconocotiza.png"
                   width={100}
                   height={100}
+                  alt="Ícono Cotiza"
                 />
                 <p className='text-2xl font-alternative'>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                   vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -60,6 +62,7 @@ export default function Home() {
                   src="/assets/iconoblog.png"
                   width={100}
                   height={100}
+                  alt="Ícono Blog"
                 />
                 <p className='text-2xl font-alternative'>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                   vitae dicta sunt explicabo.</p>
@@ -70,6 +73,7 @@ export default function Home() {
                   src="/assets/iconoasesorias.png"
                   width={100}
                   height={100}
+                  alt="Ícono Asesorías"
                 />
                 <p className='text-2xl font-alternative'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                   laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi

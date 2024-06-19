@@ -109,6 +109,7 @@ const Formulario = () => {
                   src="/icons/flechaazulderecha.png"
                   width={100}
                   height={100}
+                  alt="Ícono flecha azul a la derecha"
                   />
                   <button
                     className="bg-custom-green text-3xl text-custom-blue py-2 px-4 rounded-full 

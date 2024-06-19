@@ -74,6 +74,7 @@ function Footer() {
 					src="/assets/isotipodos.png"
 					width={200}
 					height={200}
+					alt="isotipo Asesorías Valdivia"
 					
 					/>
 				</div>

@@ -26,6 +26,7 @@ const CardAsesorias = ({ title, description, imageSrc, reverse }) => {
             src="/icons/flechaazulizquierda.png"
             width={100}
             height={100}
+            alt="Flecha azul izquierda"
           />
         </div>
       </div>
