@@ -1,6 +1,7 @@
 'use client'
 // components/FormularioContacto.js
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Formulario = () => {
     const [formData, setFormData] = useState({
@@ -15,40 +16,51 @@ const Formulario = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
     
-      const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
+        try {
+          const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+      
+          if (response.ok) {
+            alert('Correo enviado exitosamente');
+          } else {
+            alert('Error al enviar el correo');
+          }
+        } catch (error) {
+          alert('Error al enviar el correo');
+        }
       };
-    
       return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-blue-200 to-blue-100">
-          <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl flex flex-col md:flex-row">
-            <div className="md:w-1/2 flex flex-col justify-between mb-8 md:mb-0">
-              <div className="mb-8 md:mb-0">
-                <p className="text-gray-700 text-sm">Para más información, contáctanos a través del formulario.</p>
-              </div>
-              <div className="hidden md:block mt-24 bg-green-100 p-4 rounded-lg text-green-600">
-                Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 md:pl-8">
-              <p className="text-left mb-6">Para continuar completa el siguiente formulario:</p>
+        <div className="font-grotesk container ">
+          <h1 className='text-2xl text-custom-blue p-10'>Para continuar completa el siguiente formulario</h1>
+          <div className="p-8 rounded-lg w-full flex flex-col md:flex-row mx-20 items-center justify-center ">
+            
+           
+            <div className="w-full font-grotesk ">
+             
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-1" htmlFor="nombre">*Nombre:</label>
+                  <label className="text-custom-blue text-xl py-2 font-bold mb-1" htmlFor="nombre">* Nombre:</label>
                   <input
-                    className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    className="w-full px-3 py-2 border rounded-full shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="text"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
                     required
                   />
+                  
                 </div>
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-1" htmlFor="apellido">*Apellido:</label>
+                  <label className=" text-custom-blue text-xl py-2 font-bold mb-1" htmlFor="apellido">* Apellidos:</label>
                   <input
-                    className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    className="w-full px-3 py-2 border rounded-full shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="text"
                     name="apellido"
                     value={formData.apellido}
@@ -57,68 +69,71 @@ const Formulario = () => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-1" htmlFor="correo">*Correo:</label>
+                  <label className=" text-custom-blue text-xl py-2 font-bold mb-1" htmlFor="correo">* Correo:</label>
                   <input
-                    className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    className="w-full px-3 py-2 border rounded-full shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="email"
                     name="correo"
                     value={formData.correo}
                     onChange={handleChange}
                     required
                   />
-                </div>
+                  </div>
+               
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-1" htmlFor="telefono">Teléfono:</label>
+                  <label className=" text-custom-blue text-xl py-2 font-bold mb-1" htmlFor="telefono">Teléfono:</label>
                   <input
-                    className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    className="w-full px-3 py-2 border rounded-full shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="text"
                     name="telefono"
                     value={formData.telefono}
                     onChange={handleChange}
                   />
+                
                 </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-1" htmlFor="mensaje">*Mensaje:</label>
+                <div className='mb-4'>
+                  <label className=" text-custom-blue text-xl py-2 font-bold" htmlFor="mensaje">* Mensaje:</label>
                   <textarea
-                    className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    className="w-full px-3 py-2 h-36 rounded-xl border shadow appearance-none focus:outline-none focus:shadow-outline"
                     name="mensaje"
                     value={formData.mensaje}
                     onChange={handleChange}
                     maxLength="888"
                     required
                   />
-                  <p className="text-right text-xs mt-1">*máximo 888 caracteres</p>
+                  
+                  <p className="text-right text-s text-custom-blue mt-1">*Los campos marcados con * son obligatorios.</p>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-end ">
+                  <Image
+                  src="/icons/flechaazulderecha.png"
+                  width={100}
+                  height={100}
+                  />
                   <button
-                    className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline flex items-center"
+                    className="bg-custom-green text-3xl text-custom-blue py-2 px-4 rounded-full 
+                    hover:bg-custom-blue hover:text-custom-white focus:outline-none focus:shadow-outline flex items-center"
                     type="submit"
                   >
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
                         d="M14 5l7 7m0 0l-7 7m7-7H3"
                       ></path>
-                    </svg>
+                    
                     Enviar
                   </button>
                 </div>
               </form>
+              
             </div>
-            <div className="md:hidden w-full mt-8">
-              <div className="bg-green-100 p-4 rounded-lg text-green-600">
-                Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-              </div>
-            </div>
+            
           </div>
+         <br></br>
+         <br></br>
+         <br></br>
         </div>
       );
     };

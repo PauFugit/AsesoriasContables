@@ -7,7 +7,7 @@ const BannerCierre = () => {
     words: [
       "ASESÓRATE",
       "FÓRMATE",
-      "CRECE.",
+      "CRECE",
     ],
     loop: true,
     typeSpeed: 30,
@@ -15,15 +15,18 @@ const BannerCierre = () => {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-96 max-w-screen-2xl mx-auto flex flex-col justify-center items-center"
+   
+    <div className="h-96  flex flex-col justify-center items-center"
+    
     >
-      <h1 className="text-2xl md:text-4xl uppercase font-bold">
+      <h1 className="text-8xl uppercase text-custom-green" style={{letterSpacing:"0.2rem"}}>
         ASESORÍAS VALDIVIA
       </h1>
-      <p className="text-base md:text-lg font-semibold mt-2">
+      <p className="text-base md:text-3xl font-semibold mt-2 text-custom-white shadow-custom-green">
         {text} <Cursor cursorBlinking cursorStyle="|" cursorColor="#ffaa17" />
       </p>
     </div>
+    
   );
 };
 

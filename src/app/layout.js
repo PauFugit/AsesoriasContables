@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Asesorías Valdivia",
-  description: "Servicios de Asesorías ontables",
+  description: "Servicios de Asesorías contables",
 };
 
 export default function RootLayout({ children }) {

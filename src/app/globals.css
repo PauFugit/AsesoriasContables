@@ -6,3 +6,18 @@
 @import '~slick-carousel/slick/slick-theme.css';
 
 
+@font-face{
+    font-family: 'Overused Grotesk';
+    src: url('/fonts/OverusedGrotesk-VF.woff2') format('woff2'),
+         url('/fonts/OverusedGrotesk-VF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Overused Alternative';
+    src: url('/fonts/OverusedGrotesk-VF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: bold;
+}
+

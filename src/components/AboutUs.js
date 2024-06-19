@@ -1,62 +1,52 @@
 import Image from 'next/image'
 
-const teamMembers = [
-  {
-    name: 'RICARDO VALDIVIA SALIS',
-    role: 'CEO',
-    image: '/cards/fotoorco.png', // Actualiza con la ruta correcta
-  },
-  {
-    name: 'GABRIELA OYANADEL DUBOST',
-    role: 'Encargada RRHH',
-    image: '/cards/fotoorco.png', // Actualiza con la ruta correcta
-  },
-  {
-    name: 'HÉCTOR VALDIVIA RAMOS',
-    role: 'Asistente Contable',
-    image: '/cards/fotoorco.png', // Actualiza con la ruta correcta
-  },
-  {
-    name: 'ARIEL VILLAMÁN SÁNCHEZ',
-    role: 'Auditor Senior',
-    image: '/cards/fotoorco.png', // Actualiza con la ruta correcta
-  },
-]
 
 const AboutUs = () => {
   return (
-    <div className=" py-12 bg-center" style={{backgroundImage: "url('/fondos/fondoaboutus.png')"}}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="p-4  rounded-lg shadow-md">
-              <div className="relative w-24 h-24 mx-auto mb-4">
-                <Image src={member.image} alt={member.name} layout="fill" objectFit="cover" className="w-full" />
-              </div>
-              <h3 className="text-l font-bold">{member.name}</h3>
-              <p className="text-gray-500">{member.role}</p>
-            </div>
-          ))}
+    <div className="font-grotesk"  style={{paddingTop:"3rem"}}>
+    <header className="bg-custom-green text-white text-center py-8">
+        <h1 className="text-6xl " style={{letterSpacing:"0.5rem"}}>ASESORÍAS VALDIVIA</h1>
+      </header>
+    <div className=" py-12 w-full" style={{ backgroundImage: "url('/fondos/fondoaboutus.png')", backgroundSize: "cover" }}>
+      <div className="container mx-auto py-12">
+        <div className="flex flex-wrap justify-center items-center mb-8">
+          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
+            <img src="/images/credencialricardo.png" alt="Ricardo Valdivia Salis" className="w-full h-auto" />
+
+          </div>
+          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
+            <img src="/images/credencialgabriela.png" alt="Gabriela Oyanadel Dubost" className="w-full h-auto" />
+
+          </div>
+          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
+            <img src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
+
+          </div>
+          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
+            <img src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
+
+          </div>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="text-left">
-            <h2 className="text-2xl font-bold mb-4">QUIÉNES SOMOS</h2>
-            <p className="text-gray-700">Asesorías Valdivia SPA nace en pandemia. Luego de la aparición de COVID-19, Valdivia S.A., Consultora Auditora en el Régimen General, también nos destacamos en el Régimen Simplificado. Queremos hacer más fácil el cumplimiento tributario de nuestros clientes y brindarles las mejores herramientas para crecer con eficiencia en nuestros servicios.</p>
+            <h2 className="text-4xl text-custom-green mb-4">QUIÉNES SOMOS</h2>
+            <p className="text-white text-l">Somos Asesorías Valdivia, una firma de consultoría especializada en servicios contables, laborales, tributarios y de auditoría. Nuestro equipo está liderado por Ricardo Valdivia Salis, Contador Auditor e Ingeniero Comercial, quien aporta más de 18 años de experiencia en el sector. Nos enorgullece contar con la confianza de más de setenta empresas, que nos eligen por nuestra dedicación y compromiso con la excelencia. En Asesorías Valdivia SPA, nuestro objetivo es ofrecer soluciones integrales y personalizadas que faciliten el cumplimiento tributario y promuevan el crecimiento eficiente de nuestros clientes.</p>
           </div>
           <div className="text-right">
-            <h2 className="text-2xl font-bold mb-4">NUESTROS SERVICIOS</h2>
-            <p className="text-gray-700">Contamos con servicios de asesorías laborales, contables y tributaria, además de servicios de auditoría.</p>
+          <h2 className="text-4xl text-custom-green mb-4">HISTORIA</h2>
+            <p className="text-white text-l">Impulsada durante la crisis sanitaria del COVID-19, Asesorías Valdivia fue fundada por Ricardo Valdivia Salis, Contador Auditor e Ingeniero Comercial con 18 años de experiencia en los ámbitos contable, tributario y laboral. Inicialmente, Ricardo ofreció sus servicios a empresas de conocidos y amigos, y hoy más de setenta empresas confían en nuestra pericia y dedicación. En 2021, Gabriela Oyanadel Dubost, Ingeniera en Administración de Empresas con especialización en Recursos Humanos, se unió al equipo, fortaleciendo significativamente nuestra área laboral. Actualmente seguimos comprometidos con brindar un servicio de excelencia y apoyo constante a nuestros clientes.</p>
           </div>
           <div className="text-left">
-            <h2 className="text-2xl font-bold mb-4">HISTORIA</h2>
-            <p className="text-gray-700">Asesorías Valdivia SPA nace en pandemia. Luego de la aparición de COVID-19, Valdivia S.A., Consultora Auditora en el Régimen General, también nos destacamos en el Régimen Simplificado. Queremos hacer más fácil el cumplimiento tributario de nuestros clientes y brindarles las mejores herramientas para crecer con eficiencia en nuestros servicios.</p>
+          <h2 className="text-4xl text-custom-green mb-4">NUESTROS SERVICIOS</h2>
+            <p className="text-white text-l">En Asesorías Valdivia, ofrecemos una gama completa de servicios profesionales diseñados para satisfacer las necesidades de nuestros clientes. Nuestros servicios contables aseguran una gestión financiera precisa y eficiente, mientras que nuestros servicios laborales se centran en la administración y optimización de recursos humanos. En el ámbito tributario, proporcionamos asesoramiento experto para el cumplimiento de las obligaciones fiscales. Además, nuestras auditorías rigurosas garantizan la transparencia y exactitud de la información financiera, ayudando a las empresas a mantener altos estándares de control y cumplimiento.</p>
           </div>
           <div className="text-right">
-            <h2 className="text-2xl font-bold mb-4">NUESTROS CLIENTES</h2>
-            <p className="text-gray-700">Tenemos una basta variedad de clientes, desde Restaurantes, Empresas de Ingeniería, Empresas de Marketing, Empresas de Transportes, Empresas Marítimas, entre otros. esto a llevado a tener una basta experiencia en distintos tipos de contabilidades y basta experiencia en todos los rubros.</p>
+            <h2 className="text-4xl text-custom-green mb-4">NUESTROS CLIENTES</h2>
+            <p className="text-white text-l">En Asesorías Valdivia, atendemos a una diversa gama de clientes, que abarca desde restaurantes y empresas de ingeniería hasta empresas de marketing, transporte y marítimas, entre otros. Esta diversidad nos ha permitido adquirir una vasta experiencia en distintos tipos de contabilidades y sectores industriales. Nuestra capacidad para adaptarnos a las necesidades específicas de cada rubro nos ha consolidado como una firma de confianza para más de setenta empresas, que valoran nuestra experiencia, compromiso y dedicación al brindar soluciones eficientes y personalizadas.</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

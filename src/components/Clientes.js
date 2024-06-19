@@ -18,7 +18,7 @@ const Clientes = ({ images }) => {
           slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true,
-          dots: false,
+          dots: true,
         },
       },
       {
@@ -51,12 +51,11 @@ const Clientes = ({ images }) => {
   };
 
   return (
-    <div className="">
-      <h2 className="text-4xl font-bold text-left mb-8">NUESTROS CLIENTES</h2>
+    <div className="text-custom-blue font-grotesk container pb-20">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center">
-            <div className="rounded-full overflow-hidden w-40 h-40  border-gray-300">
+            <div className="rounded-full overflow-hidden w-40 h-40 border-custom-blue">
               <Image src={image.src} alt={image.alt} width={160} height={160} className="object-cover" />
             </div>
           </div>
@@ -70,10 +69,12 @@ const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className}  rounded-full p-2`}
+      className={`${className} next-arrow`} 
       style={{ ...style, display: 'block', right: '20px' }}
       onClick={onClick}
-    />
+    >
+      <img src="/icons/flechaverdeizquierda.png" alt="Next" width={40} height={40} />
+    </div>
   );
 };
 
@@ -81,10 +82,12 @@ const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} rounded-full p-2`}
-      style={{ ...style, display: 'block', left: '20px'}}
+      className={`${className} prev-arrow`} 
+      style={{ ...style, display: 'block', left: '-40px' }}
       onClick={onClick}
-    />
+    >
+      <img src="/icons/flechaverdederecha.png" alt="Previous" width={40} height={40} />
+    </div>
   );
 };
 
