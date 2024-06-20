@@ -6,6 +6,7 @@ import Carrousel from '@/components/Carrousel';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import NuestrosClientes from '@/components/NuestrosClientes';
+import WhatsAppButton from '@/components/WhatsappButton';
 
 
 
@@ -39,7 +40,7 @@ export default function Home() {
           <BannerEstatico />
         </div>
       
-
+<WhatsAppButton/>
       <Footer />
     </div>
 
