@@ -23,13 +23,13 @@ function Footer() {
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
 						<Link href="/contactanos">Consultas Generales</Link>
 						</li>
-						<li className="px-2 py-2">
+						<li className="py-4">
 							<MapProvider>
 								<MapComponent/>
 							</MapProvider>
 						</li>
-						<li className="px-2 py-2 text-l text-custom-blue">
-							Arturo Pratt #482,<br></br>Oficina 305.<br></br>Antofagasta, Chile.
+						<li className="py-4 text-l text-custom-blue">
+							Arturo Prat #482,<br></br>Oficina 305.<br></br>Antofagasta, Chile.
 						</li>
 
 					</ul>
@@ -65,11 +65,12 @@ function Footer() {
 							<span>RRSS</span>
 						</p>
 						<div className="flex gap-6 pb-5">
-							<Link href="http://www.instagram.com/asesoriasvaldivia"><FaInstagram className="text-2xl cursor-pointer hover:text-custom-green" /></Link>
-							<FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-							<CiMail className="text-2xl cursor-pointer hover:text-red-600" />
+							<Link href="http://www.instagram.com/asesoriasvaldivia"><FaInstagram className="text-3xl cursor-pointer hover:text-custom-green" /></Link>
+							<FaLinkedin className="text-3xl cursor-pointer hover:text-blue-600" />
+							<CiMail className="text-3xl cursor-pointer hover:text-red-600" />
 						</div>
 					</ul>
+					
 					<Image
 					src="/assets/isotipodos.png"
 					width={200}
@@ -77,11 +78,12 @@ function Footer() {
 					alt="isotipo Asesorías Valdivia"
 					
 					/>
+					
 				</div>
 			</div>
-			<div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
+			<div className="flex flex-col justify-center items-center text-center py-4 bg-gray-50">
 				<h1 className=" text-gray-800 font-semibold">
-					© 2024 All rights reserved | Unicorn ❤ Solutions		
+					© 2024 All rights reserved | Asesorías Valdivia		
 				</h1>
 			</div>
 		</>
