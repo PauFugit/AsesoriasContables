@@ -6,90 +6,104 @@ import { useState } from 'react';
 
 
 
-function NavBar() {
-    const [navbar, setNavbar] = useState(false);
-    return(
-    <div>
-        <nav className="w-full top-0 left-0 right-0 z-50 bg-custom-blue fixed">
-            <div className="justify-between  px-4 mx-auto lg:max-w-7x1 md:items-center md:flex md:px-8">
-                <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-                        <Link
-                        href="/">
-                            <Image 
-                            src="/Logouno.png"
-                            width={400}
-                            height={400}
-                            alt="logo"
-                            className='ml-10'
-                            />
-                        </Link>
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-                        {/* HAMBURGER MOBILE*/}
-
-                        <div className="md:hidden">
-                            <button
-                            className="p-2 text-custom-blue rounded-md outline-none focus:border-gray-400"
-                            onClick={()=>setNavbar(!navbar)}>
-
-                                {navbar ? (
-                                    <Image src="/assets/isotipodos.png"
-                                    width={50}
-                                    height={50}
-                                    alt="logo"/>
-                                ) : (
-                                    <Image src="/assets/isotipouno.png"
-                                    width={50}
-                                    height={50}
-                                    alt="logo"
-                                    className="focus:border-none active:border-none"
-                                    />
-                                )}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:flex ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
-              }`}
-            >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex md:space-x-6 mt-8 md:mt-0">
-              <li className="flex items-center pb-6 text-xl xl:text-s md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-custom-green border-blue-900 md:hover:text-custom-green">
-                <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />
-                <Link href="/nosotros" onClick={() => setNavbar(!navbar)}>
-                  ¿Quiénes somos?
+  return (
+    <nav className="bg-custom-blue fixed w-full top-0 z-50" >
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex">
+            <Link href="/"
+             className="text-white font-bold text-xl hidden md:block ">
+              <Image 
+              src="/Logouno.png"
+              width={400}
+              height={400}
+              alt="Logo Asesorías Valdivia"
+               />
+            </Link>
+            <Link href="/"
+             className="text-white font-bold text-xl block md:hidden">
+              <Image 
+              src="/Logouno.png"
+              width={250}
+              height={250}
+              alt="Logo Asesorías Valdivia"
+               />
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+                <Link href="/nosotros"
+                   className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />¿Quiénes Somos?
                 </Link>
-              </li>
-              <li className="flex items-center pb-6 text-xl xl:text-s md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-custom-green border-blue-900 md:hover:text-custom-green">
-                <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />
-                <Link href="/servicios" onClick={() => setNavbar(!navbar)}>
-                  Servicios
+                <Link href="/servicios"
+                   className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Servicios
                 </Link>
-              </li>
-              <li className="flex items-center pb-6 text-xl xl:text-s md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-custom-green border-blue-900 md:hover:text-custom-green">
-                <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />
-                <Link href="/noticias" onClick={() => setNavbar(!navbar)}>
-                  Noticias
+                <Link href="/noticias"
+                  className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Noticias
                 </Link>
-              </li>
-              <li className="flex items-center pb-6 text-xl xl:text-s md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:text-custom-green border-blue-900 md:hover:text-custom-green">
-                <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />
-                <Link href="/contactanos" onClick={() => setNavbar(!navbar)}>
-                  Contáctanos
+                <Link href="/contactanos"
+                  className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Contáctanos
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
+            <div className="md:hidden">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-300 hover:bg-custom-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                <svg
+                  className="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-            </div>
-        </nav>
+        </div>
+      </div>
 
-    </div>
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link href="/nosotros"
+              className="text-gray-300 hover:bg-custom-green hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                ¿Quiénes somos?
+            </Link>
+            <Link href="/servicios"
+              className="text-gray-300 hover:bg-custom-green hover:text-white block px-3 py-2 rounded-md text-base font-medium">Servicios
+            </Link>
+            <Link href="/noticias"
+               className="text-gray-300 hover:bg-custom-green hover:text-white block px-3 py-2 rounded-md text-base font-medium">Noticias
+            </Link>
+            <Link href="/contactanos"
+              className="text-gray-300 hover:bg-custom-green hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contáctanos
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
 
-);
-}
-
-export default NavBar;
+export default Navbar;

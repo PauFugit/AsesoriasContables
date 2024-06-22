@@ -14,7 +14,7 @@ export default function Home() {
 
 
       </main>
-      <div style={{ paddingTop: '8.1rem' }}></div>
+      <div ></div>
 
       <section>
 

@@ -13,7 +13,7 @@ const WhatsAppButton = () => {
         rel="noopener noreferrer"
       >
         <FaWhatsapp className='text-2xl'/>
-        <span>Contáctanos vía WhatsApp</span>
+        <span className='hidden xl:block'>Contáctanos vía WhatsApp</span>
       </p>
     </Link>
   );

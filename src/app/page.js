@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <NavBar />
       </main>
-      <div style={{ paddingTop: '10rem' }}></div>
+      <div style={{ paddingTop: '7rem' }}></div>
       <Carrousel />
 
       <div style={{ backgroundImage: "url('/fondos/Fondo.png')" }}>
