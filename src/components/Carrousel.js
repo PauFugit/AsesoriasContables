@@ -62,7 +62,8 @@ const Carrousel = () => {
                 <p className="text-lg md:text-xl text-white">{slide.description}</p>
               )}
               <div className="flex items-center space-x-4 pt-10">
-                <Image src="/icons/flechaverdederecha.png" width={60} height={60} alt="icon" />
+                <Image src="/icons/flechaverdederecha.png" className='hidden sm:block' width={60} height={60} alt="icon" />
+                <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={40} height={40} alt="icon" />
                 <Link href="/contactanos"
                   className="bg-custom-green text-custom-blue py-1 px-8 text-l md:text-xl lg:text-3xl rounded-full hover:bg-custom-white"
                   >  {slide.buttonText}
@@ -77,7 +78,8 @@ const Carrousel = () => {
         <Image src="/icons/flechaverdeizquierda.png" width={50} height={50} alt="Prev" />
       </button>
       <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4">
-        <Image src="/icons/flechaverdederecha.png" width={150} height={150} alt="Next" />
+        <Image src="/icons/flechaverdederecha.png" className="hidden sm:block" width={150} height={150} alt="Next" />
+        <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={80} height={80} alt="Next" />
       </button>
     </div>
   )

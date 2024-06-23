@@ -1,4 +1,5 @@
-import CardAsesorias from '../components/CardAsesorias'
+import CardAsesorias from '../components/CardAsesorias';
+
 
 export default function Asesorias() {
   return (
@@ -7,6 +8,7 @@ export default function Asesorias() {
         title="ASESORÍAS CONTABLES"
         description="Nuestro servicio contable abarca desde la contabilidad diaria hasta la preparación de estados financieros y reportes fiscales. Nos aseguramos de que tus registros contables estén actualizados y cumplan con las normativas vigentes. Además, te proporcionamos análisis financieros que te ayudarán a entender mejor la situación económica de tu empresa y a planificar su crecimiento."
         imageSrc="/assets/cardasesoriascontables.png"
+        alt="Imagen Asesorías Contables"
         reverse
       />
       <CardAsesorias

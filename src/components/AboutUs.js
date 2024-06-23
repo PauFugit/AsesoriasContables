@@ -1,9 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 
 
 const AboutUs = () => {
   return (
-    <div className="font-grotesk"  style={{paddingTop:"3rem"}}>
+    <div className="font-grotesk"  style={{paddingTop:"2rem"}}>
     <header className="bg-custom-green text-white text-center py-8">
         <h1 className="text-6xl " style={{letterSpacing:"0.5rem"}}>ASESORÍAS VALDIVIA</h1>
       </header>
@@ -11,19 +13,19 @@ const AboutUs = () => {
       <div className="container mx-auto py-12">
         <div className="flex flex-wrap justify-center items-center mb-8">
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <Image src="/images/credencialricardo.png" alt="Ricardo Valdivia Salis" className="w-full h-auto" />
+            <img src="/images/credencialricardo.png" alt="Ricardo Valdivia Salis" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <Image src="/images/credencialgabriela.png" alt="Gabriela Oyanadel Dubost" className="w-full h-auto" />
+            <img src="/images/credencialgabriela.png" alt="Gabriela Oyanadel Dubost" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <Image src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
+            <img src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <Image src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
+            <img src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
 
           </div>
         </div>

@@ -10,12 +10,13 @@ import BannerEstatico from '@/components/BannerEstatico';
 
 
 
+
 export default function Home() {
   return (
     <div className="font-grotesk">
 
       <NavBar />
-      <div style={{ paddingTop: '8rem' }}></div>
+      <div style={{ paddingTop: '7rem' }}></div>
       <Banner />
 
       <section>

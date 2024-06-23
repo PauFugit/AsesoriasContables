@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <NavBar />
       </main>
-      <div style={{ paddingTop: '7rem' }}></div>
+      <div style={{ paddingTop: '5rem' }}></div>
       <section>
         <AboutUs />
       </section>
