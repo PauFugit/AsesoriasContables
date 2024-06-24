@@ -14,19 +14,16 @@ const BannerCierre = () => {
     deleteSpeed: 10,
     delaySpeed: 2000,
   });
+
   return (
-   
-    <div className="h-96  flex flex-col justify-center items-center"
-    
-    >
-      <h1 className="text-8xl uppercase border-4 border-custom-green rounded-full px-20 text-custom-green" style={{letterSpacing:"0.2rem"}}>
+    <div className="h-64 md:h-80 lg:h-96 flex flex-col justify-center items-center">
+      <h1 className="text-2xl md:text-5xl lg:text-8xl uppercase border-2 md:border-4 border-custom-green rounded-full px-8 md:px-12 lg:px-20 text-custom-green" style={{ letterSpacing: "0.2rem" }}>
         ASESORÍAS VALDIVIA
       </h1>
-      <p className="text-base md:text-3xl font-semibold mt-2 text-custom-white shadow-custom-green">
+      <p className="text-sm md:text-2xl lg:text-3xl font-semibold mt-2 text-custom-white shadow-custom-green">
         {text} <Cursor cursorBlinking cursorStyle="|" cursorColor="#ffaa17" />
       </p>
     </div>
-    
   );
 };
 

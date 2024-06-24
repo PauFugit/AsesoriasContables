@@ -20,7 +20,7 @@ export default function Home() {
       <div style={{ paddingTop: '7rem' }}></div>
       <Carrousel />
 
-      <div style={{ backgroundImage: "url('/fondos/Fondo.png')" }}>
+      <div style={{ backgroundImage: "url('/fondos/fondodegradado.png')" }}>
         <section>
           <CardServices />
         </section>

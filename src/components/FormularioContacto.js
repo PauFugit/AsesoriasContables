@@ -1,124 +1,119 @@
 'use client'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
-export default function FormularioContacto() {
+const FormularioContacto = () => {
   const [formData, setFormData] = useState({
-    nombre: '',
-    apellido: '',
-    correo: '',
-    telefono: '',
-    mensaje: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:3000/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
+
+    // Aquí puedes agregar la lógica para enviar el formulario
+
+    // Mostrar alerta de éxito
+    Swal.fire({
+      title: 'Formulario enviado!',
+      text: 'Tu mensaje ha sido enviado exitosamente.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
     });
 
-    if (res.ok) {
-      // Reset form fields
-      setFormData({
-        nombre: '',
-        apellido: '',
-        correo: '',
-        telefono: '',
-        mensaje: ''
-      });
-      alert('Mensaje enviado exitosamente!');
-    } else {
-      alert('Error al enviar el mensaje.');
-    }
+    // Restablecer el formulario
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4 bg-white shadow-md rounded">
-      <div>
-        <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">Nombre</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-          className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="apellido" className="block text-sm font-medium text-gray-700">Apellido</label>
-        <input
-          type="text"
-          id="apellido"
-          name="apellido"
-          value={formData.apellido}
-          onChange={handleChange}
-          className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="correo" className="block text-sm font-medium text-gray-700">Correo</label>
-        <input
-          type="email"
-          id="correo"
-          name="correo"
-          value={formData.correo}
-          onChange={handleChange}
-          className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="telefono" className="block text-sm font-medium text-gray-700">Teléfono</label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          value={formData.telefono}
-          onChange={handleChange}
-          className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">Mensaje</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          value={formData.mensaje}
-          onChange={handleChange}
-          className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          rows="4"
-          required
-        ></textarea>
-      </div>
-      <div>
+    <div className="max-w-md mx-auto bg-trasparent  p-8  rounded-lg ">
+      <form onSubmit={handleSubmit} className="space-y-4 pb-5 ">
+        <div>
+          <label htmlFor="firstName" className="block text-sm font-bold text-gray-700 ">Nombre</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName" className="block text-sm font-bold text-gray-700">Apellido</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-bold text-gray-700">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
+          />
+        </div>
+        <div>
+          <label htmlFor="phone" className="block text-sm font-bold text-gray-700">Teléfono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-sm font-bold text-gray-700">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
+            rows="5"
+          />
+        </div>
+        
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="w-1/2 py-2 px-4 border font-bold border-transparent text-xl rounded-md text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
         >
           Enviar
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
-}
+};
 
-//    return (
-  //    <form onSubmit={onSubmit}>
-    //    <h5>Nombre</h5>
-      //  <input type="text" name="name" />
-       // <button type="submit">Submit</button>
-     // </form>
-    //)
-  //}
-  
+export default FormularioContacto;

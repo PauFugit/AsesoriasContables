@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Swal from 'sweetalert2';
+
 
 const Formulario = () => {
     const [formData, setFormData] = useState({
