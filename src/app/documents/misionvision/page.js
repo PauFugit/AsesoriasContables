@@ -12,7 +12,7 @@ export default function Home() {
             <NavBar />
   
       </main>
-      <div style={{paddingTop:"8rem"}}>
+      <div style={{paddingTop:"7rem", backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover"}}>
       <header className="bg-custom-green text-white text-center py-8">
         <h1 className="text-4xl font-bold">MISIÓN Y VISIÓN</h1>
       </header>
@@ -36,6 +36,7 @@ export default function Home() {
           </section>
         </div>
       </main>
+      
   <br></br>
   <br></br>
   <br></br>
@@ -47,7 +48,7 @@ export default function Home() {
   <br></br>
   <br></br>
   <br></br>
-
+  <div className="bg-custom-green text-white text-center py-2"> </div>
         <Footer />
       </div>
       </div>

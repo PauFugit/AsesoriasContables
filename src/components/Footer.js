@@ -15,7 +15,7 @@ function Footer() {
 					<ul>
 						<p className=" font-bold text-4xl pb-4">CONTACTO</p>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
-							contacto@asesoriasvaldivia.cl
+							<Link href="mailto:contacto@asesoriasvaldivia.cl?Subject=Consulta%20General%20Asesorías%20Valdivia">contacto@asesoriasvaldivia.cl</Link>
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
 							<Link href="/cotiza">Cotiza con nosotros</Link>
@@ -66,8 +66,8 @@ function Footer() {
 						</p>
 						<div className="flex gap-6 pb-5">
 							<Link href="http://www.instagram.com/asesoriasvaldivia"><FaInstagram className="text-3xl cursor-pointer hover:text-custom-green" /></Link>
-							<FaLinkedin className="text-3xl cursor-pointer hover:text-blue-600" />
-							<CiMail className="text-3xl cursor-pointer hover:text-red-600" />
+							<Link href="https://www.linkedin.com/in/ricardo-valdivia-salis-5bb4b0247/"><FaLinkedin className="text-3xl cursor-pointer hover:text-blue-600" /></Link>
+							<Link href="mailto:contacto@asesoriasvaldivia.cl?Subject=Consulta%20Servicios%20Asesorías%20Valdivia"><CiMail className="text-3xl cursor-pointer hover:text-red-600" /></Link>
 						</div>
 					</ul>
 					
@@ -82,9 +82,9 @@ function Footer() {
 				</div>
 			</div>
 			<div className="flex flex-col justify-center items-center text-center py-4 bg-gray-50">
-				<h1 className=" text-gray-800 font-semibold">
-					© 2024 All rights reserved | Asesorías Valdivia		
-				</h1>
+				<h4 className=" text-custom-blue font-semibold">
+					© 2024 All rights reserved | Developer by a unicorn		
+				</h4>
 			</div>
 		</>
 	);

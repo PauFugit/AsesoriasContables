@@ -11,7 +11,7 @@ export default function Home() {
             <NavBar />
   
       </main>
-      <div style={{paddingTop:"8rem"}}>
+      <div style={{paddingTop:"7rem", backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover"}}>
       <header className="bg-custom-green text-white text-center py-10">
         <h1 className="text-4xl font-bold">PRIVACIDAD</h1>
       </header>
@@ -215,7 +215,7 @@ Como bien sabes y le hemos comunicado a lo largo de las presentes políticas de 
         
       </main>
           
-  
+      <div className="bg-custom-green text-white text-center py-2"> </div>
         <Footer />
       </div>
       </div>

@@ -1,57 +1,77 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Swal from 'sweetalert2';
+import Image from 'next/image';
+import { sendEmail } from '@/app/api/sendEmail'; 
 
 const FormularioContacto = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
+    name: '',
     lastName: '',
     email: '',
     phone: '',
     message: ''
   });
 
+  const formRef = useRef(null); // Referencia al formulario
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Aquí puedes agregar la lógica para enviar el formulario
+    const templateParams = {
+      name: formData.name,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message
+    };
 
-    // Mostrar alerta de éxito
-    Swal.fire({
-      title: 'Formulario enviado!',
-      text: 'Tu mensaje ha sido enviado exitosamente.',
-      icon: 'success',
-      confirmButtonText: 'Aceptar'
-    });
-
-    // Restablecer el formulario
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    sendEmail('service_fic8vt9', 'template_awrt69t', templateParams)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          title: 'Respuesta enviada!',
+          text: 'Tu mensaje ha sido enviado exitosamente.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+        // Restablecer el formulario
+        setFormData({
+          name: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          title: 'Error al enviar tu mensaje',
+          text: 'Ha ocurrido un error al intentar enviar tu mensaje. Inténtalo nuevamente, si el error persiste escribe directamente a contacto@asesoriasvaldivia.cl',
+          icon: 'error',
+          confirmButtonText: 'Aceptar'
+        });
+      });
   };
 
   return (
-    <div className="max-w-md mx-auto bg-trasparent  p-8  rounded-lg ">
-      <form onSubmit={handleSubmit} className="space-y-4 pb-5 ">
+    <div className="max-w-md mx-auto bg-transparent p-8 rounded-lg">
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 pb-5">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-bold text-gray-700 ">Nombre</label>
+          <label htmlFor="name" className="block text-sm font-bold text-gray-700">Nombre</label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
+            id="name"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             required
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
@@ -104,13 +124,21 @@ const FormularioContacto = () => {
             rows="5"
           />
         </div>
-        
-        <button
-          type="submit"
-          className="w-1/2 py-2 px-4 border font-bold border-transparent text-xl rounded-md text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
-        >
-          Enviar
-        </button>
+        <input type="hidden" name="to_email" value="contacto@asesoriasvaldivia.cl" />
+        <div className="flex items-center p-4">
+          <Image
+            src="/icons/flechaazulderecha.png"
+            width={80}
+            height={80}
+            alt="Flecha azul"
+          />
+          <button
+            type="submit"
+            className="w-1/2 py-2 px-2 border border-transparent text-2xl rounded-3xl text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
+          >
+            Enviar
+          </button>
+        </div>
       </form>
     </div>
   );

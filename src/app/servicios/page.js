@@ -19,15 +19,15 @@ export default function Home() {
       <div style={{ paddingTop: '7rem' }}></div>
       <Banner />
 
-      <section>
+      <section style={{ backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover" }}>
         <Asesorias />
       </section>
 
-    
+      <div className="bg-custom-green text-white text-center py-1"> </div>
       <section className='bg-center' style={{ backgroundImage: "url('/assets/bannerextrados.jpg')", backgroundSize: "cover" }}>
         <BannerEstatico />
       </section>
-
+      <div className="bg-custom-green text-white text-center py-1"> </div>
       <Footer />
     </div>
 

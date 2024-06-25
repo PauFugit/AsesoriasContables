@@ -1,7 +1,8 @@
 'use client'
-
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import Image from 'next/image';
+import { sendEmail } from '@/app/api/sendEmail'; 
 
 const FormularioCotiza = () => {
   const [formData, setFormData] = useState({
@@ -24,25 +25,43 @@ const FormularioCotiza = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Aquí puedes agregar la lógica para enviar el formulario
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      option: formData.option
+    };
 
-    // Mostrar alerta de éxito
-    Swal.fire({
-      title: 'Formulario enviado!',
-      text: 'Tu formulario ha sido enviado exitosamente.',
-      icon: 'success',
-      confirmButtonText: 'Aceptar'
-    });
-
-    // Restablecer el formulario
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: '',
-      option: ''
-    });
+    sendEmail('service_fic8vt9', 'template_ofu025m', templateParams)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          title: 'Solicitud enviada!',
+          text: 'Tu solicitud ha sido enviada exitosamente.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+        // Restablecer el formulario
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
+          option: ''
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          title: 'Error al enviar tu solicitud',
+          text: 'Ha ocurrido un error al intentar enviar tu solicitud. Inténtalo nuevamente, si el error persiste escribe directamente a contacto@asesoriasvaldivia.cl',
+          icon: 'error',
+          confirmButtonText: 'Aceptar'
+        });
+      });
   };
 
   return (
@@ -106,10 +125,10 @@ const FormularioCotiza = () => {
             className="mt-1 block w-full p-2 border border-custom-green rounded-md  focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
           >
             <option value="" disabled>Selecciona una opción</option>
-            <option value="option1">Asesoría Contable</option>
-            <option value="option2">Asesoría Laboral</option>
-            <option value="option3">Asesoría Tributaria</option>
-            <option value="option4">Auditoría</option>
+            <option value="Asesoría Contable">Asesoría Contable</option>
+            <option value="Asesoría Laboral">Asesoría Laboral</option>
+            <option value="Asesoría Tributaria">Asesoría Tributaria</option>
+            <option value="Auditoría">Auditoría</option>
           </select>
         </div>
         <div>
@@ -120,17 +139,24 @@ const FormularioCotiza = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-custom-blue focus:border-custom-blue"
             rows="5"
           />
         </div>
-        
-        <button
-          type="submit"
-          className="w-1/2 py-2 px-4 border font-bold border-transparent text-xl rounded-md text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
-        >
-          Enviar
-        </button>
+        <div className="flex items-center p-4">
+          <Image
+            src="/icons/flechaazulderecha.png"
+            width={80}
+            height={80}
+            alt="Flecha azul"
+          />
+          <button
+            type="submit"
+            className="w-1/2 py-2 px-2 border border-transparent text-2xl rounded-3xl text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
+          >
+            Enviar
+          </button>
+        </div>
       </form>
     </div>
   );

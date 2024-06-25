@@ -21,13 +21,14 @@ const AboutUs = () => {
 
           </div>
           <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
-            <img src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
-
-          </div>
-          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
             <img src="/images/credencialariel.png" alt="Ariel Villaman Sanchez" className="w-full h-auto" />
 
           </div>
+          <div className="w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
+            <img src="images/credencialhector.png" alt="Hector Valdivia Ramos" className="w-full h-auto" />
+
+          </div>
+          
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="text-left">

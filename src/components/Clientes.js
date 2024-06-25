@@ -55,7 +55,7 @@ const Clientes = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center p-2">
             <div className="relative w-40 h-40">
-              <Image src={image.src} alt={image.alt} layout="fill" className="object-cover rounded-full" />
+              <Image src={image.src} alt={image.alt} fill className="object-cover rounded-full" />
             </div>
           </div>
         ))}

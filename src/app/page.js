@@ -20,7 +20,7 @@ export default function Home() {
       <div style={{ paddingTop: '7rem' }}></div>
       <Carrousel />
 
-      <div style={{ backgroundImage: "url('/fondos/fondodegradado.png')" }}>
+      <div style={{ backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover" }}>
         <section>
           <CardServices />
         </section>
@@ -29,18 +29,18 @@ export default function Home() {
         </section>
 
         <div className='py-8'>
-         
-          <h2 className="text-6xl md:text-8xl pl-4 font-alternative text-left my-10 py-10  text-custom-blue" style={{letterSpacing:"0.1rem"}}>NUESTROS CLIENTES</h2>
-            <NuestrosClientes />
-          </div>
-       
-      </div>
-     
-        <div className="bg-center" style={{ backgroundImage: "url('/assets/bannercierredos.jpg')", backgroundSize: "cover" }} >
-          <BannerEstatico />
+
+          <h2 className="text-6xl md:text-8xl pl-4 font-alternative text-left my-10 py-10  text-custom-blue" style={{ letterSpacing: "0.1rem" }}>NUESTROS CLIENTES</h2>
+          <NuestrosClientes />
         </div>
-      
-<WhatsAppButton/>
+
+      </div>
+
+      <div className="bg-center" style={{ backgroundImage: "url('/assets/bannercierredos.jpg')", backgroundSize: "cover" }} >
+        <BannerEstatico />
+      </div>
+
+      <WhatsAppButton />
       <Footer />
     </div>
 

@@ -46,7 +46,7 @@ const Carrousel = () => {
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
         >
-          <Image src={slide.src} alt={`Slide Image ${index + 1}`} layout="fill" objectFit="cover" className="w-full h-full" />
+          <Image src={slide.src} alt={`Slide Image ${index + 1}`} fill objectFit="cover" className="w-full h-full" />
           <div className="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col justify-center items-start text-left p-8 md:p-16 lg:p-24 xl:p-32">
             <div className="mb-4">
               {slide.text.map((word, i) => (

@@ -32,6 +32,9 @@ export default function NuestrosClientes() {
     { src: '/images/client26.png', alt: 'Client 26' },
     { src: '/images/client27.png', alt: 'Client 27' },
     { src: '/images/client28.png', alt: 'Client 28' },
+    { src: '/images/client29.png', alt: 'Client 29' },
+    { src: '/images/client30.png', alt: 'Client 30' },
+    { src: '/images/client31.png', alt: 'Client 31' },
   ];
 
   return (
