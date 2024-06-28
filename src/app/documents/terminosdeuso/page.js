@@ -10,7 +10,7 @@ export default function Home() {
         <NavBar />
       </main>
       <div className='font-grotesk' style={{ paddingTop: "7rem", backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover" }}>
-        <header className="bg-custom-green text-white text-center py-8">
+        <header className="bg-custom-blue text-white text-center py-8">
           <h1 className="text-4xl font-bold">AVISO LEGAL Y TÉRMINOS DE USO</h1>
         </header>
         

@@ -12,7 +12,7 @@ export default function Home() {
   
       </main>
       <div style={{paddingTop:"7rem", backgroundImage: "url('/fondos/fondodegradado.png')", backgroundSize: "cover"}}>
-      <header className="bg-custom-green text-white text-center py-10">
+      <header className="bg-custom-blue text-white text-center py-10">
         <h1 className="text-4xl font-bold">PRIVACIDAD</h1>
       </header>
       <main className="container mx-auto p-6 ">
@@ -118,7 +118,7 @@ El método más rápido y sencillo sería accediendo en tu cuenta de usuario dir
 <br></br>
 El interesado podrá ejercitar sus derechos mediante comunicación por escrito dirigida a asesoriasvaldivia.cl con la referencia “Protección de datos”, especificando sus datos, acreditando su identidad y los motivos de su solicitud en la siguiente dirección:
 <br></br>
-También podrá ejercitar los derechos, a través del correo electrónico: <p className='text-custom-green'><b>CONTACTO@ASESORIASVALDIVIA.CL</b></p>
+También podrá ejercitar los derechos, a través del correo electrónico: <b className='text-custom-blue'>CONTACTO@ASESORIASVALDIVIA.CL</b>
 <br></br> 
 <br></br>
 <br></br>
@@ -149,7 +149,7 @@ Asimismo también tiene contratados los servicios de email marketing con la comp
 <br></br>
 De conformidad con lo dispuesto en la Ley 34/20023, de 11 de junio de Servicios de la Sociedad de la Información y del Comercio Electrónico puedes oponerte al uso de su información para fines publicitarios, investigaciones de mercado o desarrollo de encuestas de satisfacción en cualquier momento, así como revocar tu consentimiento en cualquier momento (sin efecto retroactivo).
 <br></br>
-Para ello, deberás enviar un correo electrónico a la dirección <p className='text-custom-green'><b>CONTACTO@ASESORIASVALDIVIA.CL</b></p> Si has recibido publicidad por correo electrónico, también podrás oponerte desde dicho correo electrónico, pinchando en el enlace incluido en el mismo siguiendo las instrucciones que te sean facilitadas. Otra forma más sencilla sería acceder a tu cuenta de usuario y seleccionar las opciones correspondientes.
+Para ello, deberás enviar un correo electrónico a la dirección <b className='text-custom-blue'>CONTACTO@ASESORIASVALDIVIA.CL</b> Si has recibido publicidad por correo electrónico, también podrás oponerte desde dicho correo electrónico, pinchando en el enlace incluido en el mismo siguiendo las instrucciones que te sean facilitadas. Otra forma más sencilla sería acceder a tu cuenta de usuario y seleccionar las opciones correspondientes.
 <br></br>
 Por favor, ten en cuenta que nuestros sistemas pueden requerir un lapso de tiempo que en ningún caso superará 48 horas para que tu oposición o revocación se hagan efectivas, entendiéndose que durante dicho periodo de tiempo puedes seguir recibiendo mensajes.
 <br></br>
