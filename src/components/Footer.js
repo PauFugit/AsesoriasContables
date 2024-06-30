@@ -41,7 +41,7 @@ function Footer() {
 						<Link href="/nosotros">Quiénes Somos</Link>
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
-							<Link href="/documents/misionvision">Misión y Visión</Link>
+							<Link href="/misionvision">Misión y Visión</Link>
 						</li>
 					</ul>
 				</div>
@@ -49,10 +49,10 @@ function Footer() {
 					<ul>
 						<p className="font-bold text-4xl pb-4">POLÍTICAS</p>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
-						<Link href="/documents/privacidad">Privacidad</Link>
+						<Link href="/privacidad">Privacidad</Link>
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
-							<Link href="/documents/terminosdeuso">Aviso legal y Términos de Uso</Link>
+							<Link href="/terminosdeuso">Aviso legal y Términos de Uso</Link>
 						</li>
 						<li className=" text-xl pb-2 font-semibold hover:text-custom-green cursor-pointer">
 							<Link href="/contactanos">Sugerencias y Felicitaciones</Link>
@@ -77,7 +77,7 @@ function Footer() {
 					height={200}
 					alt="isotipo Asesorías Valdivia"
 					
-					/>
+					></Image>
 					
 				</div>
 			</div>

@@ -14,7 +14,7 @@ const Card = ({ imageSrc, title, description }) => {
           fill
           objectFit="cover" 
           className="rounded-xl" 
-        />
+        ></Image>
       </div>
       <div className="w-full text-left px-4">
         <h3 className="text-2xl font-bold ">{title}</h3>

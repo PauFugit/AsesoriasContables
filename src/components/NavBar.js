@@ -25,7 +25,7 @@ const Navbar = () => {
               width={400}
               height={400}
               alt="Logo Asesorías Valdivia"
-               />
+               ></Image>
             </Link>
             <Link href="/"
              className="text-white font-bold text-xl block md:hidden">
@@ -42,19 +42,19 @@ const Navbar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link href="/nosotros"
                    className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
-                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />¿Quiénes Somos?
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" ></Image>¿Quiénes Somos?
                 </Link>
                 <Link href="/servicios"
                    className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
-                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Servicios
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" ></Image>Servicios
                 </Link>
                 <Link href="/noticias"
                   className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
-                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Noticias
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" ></Image>Noticias
                 </Link>
                 <Link href="/contactanos"
                   className="text-gray-300  hover:text-custom-green px-3 py-2 rounded-md text-sm font-medium flex items-center">
-                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" />Contáctanos
+                    <Image src="/icons/flechaverdederecha.png" width={25} height={25} alt="icon" className="mr-2" ></Image>Contáctanos
                 </Link>
               </div>
             </div>

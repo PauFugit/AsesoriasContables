@@ -12,7 +12,7 @@ const CardAsesorias = ({ title, description, imageSrc, reverse }) => {
             fill
             sizes="(max-width: 768px) 100vw, (min-width: 768px) 33vw"
             className="rounded-lg object-cover"
-          />
+          ></Image>
         </div>
         <div className="p-6 w-full md:w-2/3 flex flex-col justify-between font-alternative">
           <div className="flex flex-col justify-between py-4 md:py-20">
@@ -31,7 +31,7 @@ const CardAsesorias = ({ title, description, imageSrc, reverse }) => {
                 width={50}
                 height={50}
                 alt="Flecha azul izquierda"
-              />
+              ></Image>
             </div>
           </div>
         </div>

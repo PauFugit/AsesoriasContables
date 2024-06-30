@@ -27,9 +27,8 @@ const Valores = () => {
           <div key={index} className="relative flex flex-col items-center mb-8 md:mb-0 md:px-4">
             <div className="w-64 h-64 rounded-full flex items-center justify-center relative mb-4">
               <Image src={value.image} alt={value.title} className="object-fit"
-                height={800}
-                width={800}
-              />
+               width='300' height='300' 
+              ></Image>
             </div>
 
           </div>

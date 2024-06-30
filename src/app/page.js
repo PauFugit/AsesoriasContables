@@ -3,6 +3,7 @@ import BannerEstatico from '@/components/BannerEstatico';
 import BlogSection from '@/components/BlogSection';
 import CardServices from '@/components/CardServices';
 import Carrousel from '@/components/Carrousel';
+import Construccion from '@/components/Construccion';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import NuestrosClientes from '@/components/NuestrosClientes';
@@ -13,6 +14,9 @@ import WhatsAppButton from '@/components/WhatsappButton';
 
 export default function Home() {
   return (
+
+
+   
     <div className="font-grotesk">
       <main>
         <NavBar />
@@ -45,5 +49,5 @@ export default function Home() {
     </div>
 
 
-  );
+);
 }

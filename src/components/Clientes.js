@@ -9,8 +9,8 @@ const Clientes = ({ images }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 3800,
@@ -55,7 +55,7 @@ const Clientes = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center p-2">
             <div className="relative w-40 h-40">
-              <Image src={image.src} alt={image.alt} fill className="object-cover rounded-full" />
+              <Image src={image.src} alt={image.alt} fill className="object-cover rounded-full" ></Image>
             </div>
           </div>
         ))}
@@ -64,28 +64,28 @@ const Clientes = ({ images }) => {
   );
 };
 
-const SampleNextArrow = (props) => {
+const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
       className={`${className} next-arrow`} 
-      style={{ ...style, display: 'block', right: '20px' }}
+      style={{ ...style, display: 'block', right: '40px' }}
       onClick={onClick}
     >
-      <Image src="/icons/flechaverdeizquierda.png" alt="Next" width={40} height={40} />
+  {/*    <Image src="/icons/flechaverdederecha.png" alt="Next" width={200} height={200} ></Image>*/}
     </div>
   );
 };
 
-const SamplePrevArrow = (props) => {
+const PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
       className={`${className} prev-arrow`} 
-      style={{ ...style, display: 'block', left: '20px' }}
+      style={{ ...style, display: 'block', left: '-30px' }}
       onClick={onClick}
     >
-      <Image src="/icons/flechaverdederecha.png" alt="Previous" width={40} height={40} />
+  {/* <Image src="/icons/flechaverdeizquierda.png" alt="Previous" width={200} height={200} ></Image> */}
     </div>
   );
 };

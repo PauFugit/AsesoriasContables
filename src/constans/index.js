@@ -13,10 +13,10 @@ import {
   import SpaceCity7 from "../../public/assets/clienteuno.png";
   import SpaceCity8 from "../../public/assets/clienteuno.png";
   import SpaceCity9 from "../../public/assets/clienteuno.png";
-  import CardServicioUno from "../../public/assets/cardserviciouno.jpg";
-  import CardServicioDos from "../../public/assets/cardserviciodos.jpg";
-  import CardServicioTres from "../../public/assets/cardserviciotres.jpg";
-  import CardServicioCuatro from "../../public/assets/cardserviciocuatro.jpg";
+  import CardServicioUno from "/assets/cardserviciouno.jpg";
+  import CardServicioDos from "/assets/cardserviciodos.jpg";
+  import CardServicioTres from "/assets/cardserviciotres.jpg";
+  import CardServicioCuatro from "/assets/cardserviciocuatro.jpg";
   
 
 

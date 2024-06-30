@@ -9,7 +9,7 @@ export default function BlogSection() {
       <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-12">
         <Link href="/noticias" className="hover:bg-custom-green hover:text-custom-blue rounded-full">
           <span className="flex items-center px-8 py-2 bg-transparent rounded-full shadow-lg hover:shadow-xl">
-            <Image src="/icons/iconoblog.png" width={150} height={150} alt="Blog" />
+            <Image src="/icons/iconoblog.png" width={150} height={150} alt="Blog" ></Image>
             <div className="ml-4">
               <h2 className="text-2xl md:text-4xl">BLOG</h2>
               <p className="text-xs md:text-base">Datos y noticias para impulsar tu <br /> negocio y marca personal</p>
@@ -18,7 +18,7 @@ export default function BlogSection() {
         </Link>
         <Link href="/servicios" className="hover:bg-custom-green hover:text-custom-blue rounded-full">
           <span className="flex items-center px-8 py-2 bg-transparent rounded-full shadow-lg hover:shadow-xl">
-            <Image src="/icons/iconoasesorias.png" width={150} height={150} alt="Asesorías" />
+            <Image src="/icons/iconoasesorias.png" width={150} height={150} alt="Asesorías" ></Image>
             <div className="ml-4">
               <h2 className="text-2xl md:text-4xl">ASESORÍAS</h2>
               <p className="text-xs md:text-base">personalizadas y confidenciales</p>
@@ -28,7 +28,7 @@ export default function BlogSection() {
       </div>
       <Link href="/contactanos" className="hover:bg-custom-green hover:text-custom-blue rounded-full">
         <span className="flex items-center px-8 py-4 bg-transparent rounded-full shadow-lg hover:shadow-xl">
-          <Image src="/icons/iconoescribenos.png" width={150} height={150} alt="Servicios" />
+          <Image src="/icons/iconoescribenos.png" width={150} height={150} alt="Servicios" ></Image>
           <div className="ml-4">
             <h2 className="text-2xl md:text-4xl">COTIZA NUESTROS <br /> SERVICIOS</h2>
             <p className="text-xs md:text-base">Asesorías Valdivia cuenta con una serie de servicios que pueden ayudarte a llevar tu negocio al éxito</p>
@@ -36,11 +36,11 @@ export default function BlogSection() {
         </span>
       </Link>
       <div className="block xl:hidden mt-4">
-        <Image src="/icons/flechagranderesponsiva.png" width={400} height={400} alt="Imagen" />
+        <Image src="/icons/flechagranderesponsiva.png" width={400} height={400} alt="Imagen" ></Image>
       </div>
     </div>
     <div className="hidden xl:block flex-shrink-0">
-      <Image src="/icons/iconoflechagrande.png" width={400} height={400} alt="Imagen" />
+      <Image src="/icons/iconoflechagrande.png" width={400} height={400} alt="Imagen" ></Image>
     </div>
   </div>
 </div>

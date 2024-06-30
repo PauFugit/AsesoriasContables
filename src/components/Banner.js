@@ -9,7 +9,7 @@ const Banner = () => {
         fill
         sizes="100vw"
         className="object-cover"
-      />
+      ></Image>
       <div className="relative z-10 p-6 md:p-16 font-grotesk  bg-opacity-50">
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-custom-green py-10 md:py-20" style={{ letterSpacing: "0.5rem" }}>
           NUESTROS SERVICIOS

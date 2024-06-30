@@ -149,7 +149,7 @@ const FormularioCotiza = () => {
             width={80}
             height={80}
             alt="Flecha azul"
-          />
+          ></Image>
           <button
             type="submit"
             className="w-1/2 py-2 px-2 border border-transparent text-2xl rounded-3xl text-custom-blue bg-custom-green hover:bg-custom-blue hover:text-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"

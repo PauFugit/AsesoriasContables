@@ -46,7 +46,7 @@ const Carrousel = () => {
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
         >
-          <Image src={slide.src} alt={`Slide Image ${index + 1}`} fill objectFit="cover" className="w-full h-full" />
+          <Image src={slide.src} alt={`Slide Image ${index + 1}`} fill objectFit="cover" className="w-full h-full" ></Image>
           <div className="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col justify-center items-start text-left p-8 md:p-16 lg:p-24 xl:p-32">
             <div className="mb-4">
               {slide.text.map((word, i) => (
@@ -62,8 +62,8 @@ const Carrousel = () => {
                 <p className="text-lg md:text-xl text-white">{slide.description}</p>
               )}
               <div className="flex items-center space-x-4 pt-10">
-                <Image src="/icons/flechaverdederecha.png" className='hidden sm:block' width={60} height={60} alt="icon" />
-                <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={40} height={40} alt="icon" />
+                <Image src="/icons/flechaverdederecha.png" className='hidden sm:block' width={60} height={60} alt="icon" ></Image>
+                <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={40} height={40} alt="icon" ></Image>
                 <Link href="/contactanos"
                   className="bg-custom-green text-custom-blue py-1 px-8 text-l md:text-xl lg:text-3xl rounded-full hover:bg-custom-white"
                   >  {slide.buttonText}
@@ -75,11 +75,11 @@ const Carrousel = () => {
         </div>
       ))}
       <button onClick={prevSlide} className="hidden absolute left-0 top-1/2 transform -translate-y-1/2 px-4">
-        <Image src="/icons/flechaverdeizquierda.png" width={50} height={50} alt="Prev" />
+        <Image src="/icons/flechaverdeizquierda.png" width={50} height={50} alt="Prev" ></Image>
       </button>
       <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4">
-        <Image src="/icons/flechaverdederecha.png" className="hidden sm:block" width={150} height={150} alt="Next" />
-        <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={80} height={80} alt="Next" />
+        <Image src="/icons/flechaverdederecha.png" className="hidden sm:block" width={150} height={150} alt="Next" ></Image>
+        <Image src="/icons/flechaverdederecha.png" className='block sm:hidden' width={80} height={80} alt="Next" ></Image>
       </button>
     </div>
   )

@@ -22,10 +22,8 @@ export default function Home() {
       <section style={{ backgroundImage: "url('/fondos/fondovalores.png')", backgroundSize: "cover" }}>
         <Valores />
         <div className="bg-custom-green text-white text-center py-2"> </div>
-        <div className='container py-12'>
-        <h2 className="text-6xl text-left my-10 py-10  text-custom-blue" style={{letterSpacing:"0.1rem"}}>NUESTROS CLIENTES</h2>
-        <NuestrosClientes />
-      </div>
+      
+      
 
       </section>
       <div className="bg-custom-green text-white text-center py-2"> </div>

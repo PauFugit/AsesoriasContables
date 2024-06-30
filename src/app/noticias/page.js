@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 
 
-export default function Home() {
+export default function Noticias() {
   return (
     <div className="font-grotesk">
       <main>
@@ -25,7 +25,7 @@ export default function Home() {
             layout="fill"
             objectFit="cover"
             className=""
-          />
+          ></Image>
           <div className="relative z-10" style={{paddingTop:"20rem"}}>
             <div className='px-20 py-20'>
             <h1 className="text-7xl text-custom-green" style={{letterSpacing:"0.5rem"}}>NOTICIAS</h1>
